@@ -20,7 +20,31 @@ $msg1="Contact Person Name * </br> ".$name." Email *</br>".$email."Website </br>
     if(isset($_POST['savebuyer'])){
       //  $Clienttype = implode(',',$_REQUEST['buyerClienttype']);
         
-        
+      $insert =mysqli_query($connect, "INSERT INTO  buyers SET 
+      buyerCompanyname = '".$_REQUEST['buyerCompanyname']."',
+      buyerHoaddress = '$addresss',
+      buyerGstno = '".$_REQUEST['buyerGstno']."',
+      buyerFullname = '$name',
+      buyerPhone = '$phone',
+      buyerEmail = '$email',
+      buyerWebsite = '$web'"); 
+
+$id = mysqli_insert_id($connect);
+
+
+foreach ($_FILES['buyerfiles']['name'] as $key=> $filename) 
+{
+   $temp_name1=$_FILES['buyerfiles']['tmp_name'][$key];
+ $file_name21=$filename;   
+  $fl = time();
+  $nefilename =   $fl.$file_name21;
+  $file_path1="images/buyer/".$nefilename;
+  move_uploaded_file($temp_name1,$file_path1);
+    
+  $insert =mysqli_query($connect, "INSERT INTO buyerfiles SET 
+      buyerfileBid = '".$id."',
+      buyerfilePath   = '".$nefilename."'"); 
+}
      // /Create an instance; passing `true` enables exceptions
       $mail = new PHPMailer(true);
           //Server settings
@@ -54,39 +78,7 @@ $msg1="Contact Person Name * </br> ".$name." Email *</br>".$email."Website </br>
           </div>';
            }
         }
-  //  print_r($_POST); die("kk");
-   
-
-   /*$insert =mysqli_query($connect, "INSERT INTO  buyers SET 
-                    buyerCompanyname = '".$_REQUEST['buyerCompanyname']."',
-                    buyerHoaddress = '".$_REQUEST['buyerHoaddress']."',
-                    buyerGstno = '".$_REQUEST['buyerGstno']."',
-                    buyerFullname = '".$_REQUEST['buyerFullname']."',
-                    buyerPhone = '".$_REQUEST['buyerPhone']."',
-                    buyerEmail = '".$_REQUEST['buyerEmail']."',
-                    buyerWebsite = '".$_REQUEST['buyerWebsite']."'"); 
-    
-              $id = mysqli_insert_id($connect);
-            
-             
-           foreach ($_FILES['buyerfiles']['name'] as $key=> $filename) 
-            {
-                 $temp_name1=$_FILES['buyerfiles']['tmp_name'][$key];
-               $file_name21=$filename;   
-                $fl = time();
-                $nefilename =   $fl.$file_name21;
-                $file_path1="images/buyer/".$nefilename;
-                move_uploaded_file($temp_name1,$file_path1);
-                  
-                $insert =mysqli_query($connect, "INSERT INTO buyerfiles SET 
-                    buyerfileBid = '".$id."',
-                    buyerfilePath   = '".$nefilename."'"); 
-            }
-            
-       // }      * 
-
-                 header("Location:buyer.php?msg=s");
-    }*/ 
+ 
   
   if($_REQUEST['msg'] == "s")
   {
