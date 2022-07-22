@@ -88,7 +88,7 @@ if(isset($_POST['savevendor'])){
             $mail->Body = $msg1  ; //Add a recipient
             if($mail->Send()) 
              {
-              header("Location:buyer.php?msg=s");
+              header("Location:vendor.php?msg=s");
                          }
                          else
            {
