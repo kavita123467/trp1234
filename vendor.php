@@ -80,7 +80,7 @@ if(isset($_POST['savevendor'])){
             //Recipients
             $mail->setFrom=$_POST['vendorEmail'];
             $mail->Fromname=$_POST['vendorFullname'];
-            $mail->addAddress($_POST["vendorEmail"], $_POST["vendorFullname"]); 
+            $mail->addAddress('kavitaperfectiongeeks@gmail.com','touser'); 
            // $mail->AddCC($_POST["buyerEmail"], $_POST["buyerFullname"]); //Adds a "Cc" address
             $mail->WordWrap = 50;       //Sets word wrapping on the body of the message to a given number of characters
             $mail->IsHTML(true);       //Sets message type to HTML    
