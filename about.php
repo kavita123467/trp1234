@@ -147,7 +147,7 @@
                                 <img class="card-img-top" src="images/team/team0.png" alt="Card image cap">
                                 <div style="padding: 20px 20px 0px !important; background-color: #ffca75;">
                                     <h4 class="card-title fw-bold ">Vineet Seth</h4>
-                                    <p style="font-size: 14px">Director - Mentor</p>
+                                    <p style="font-size: 14px">Director & Mentor </p>
                                 </div>
                             </div>
                         </div>
@@ -157,7 +157,7 @@
                                 <img class="card-img-top" src="images/team/team2.png" alt="Card image cap" style="height:298px !important;">
                                 <div style="padding: 20px 20px 0px !important; background-color: #ffca75;">
                                     <h4 class="card-title fw-bold ">Vikram Mehra</h4>
-                                    <p style="font-size: 14px">Director & CEO </p>
+                                    <p style="font-size: 14px"> Director & CEO </p>
                                 </div>
                             </div>
                         </div>
@@ -166,7 +166,7 @@
                                 <img class="card-img-top" src="images/team/team3.png" alt="Card image cap">
                                 <div style="padding: 20px 20px 0px !important; background-color: #ffca75;">
                                     <h4 class="card-title fw-bold ">Mayank Pathak</h4>
-                                    <p style="font-size: 14px">Director and COO</p>
+                                    <p style="font-size: 14px">Director & COO </p>
                                 </div>
                             </div>
                         </div>
